@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Mohammed Perves">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP321 Project: Covid Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <center><h1 id="title">Weekly Covid Dashboard by Mohammed Perves</h1></center>
+    <div class="parent">
+      <div class="div1" id="map_div">
+        <p id="info">Hover over a country for more details. Click on a country to view all the attribures. Drag and Zoom is enabled.</p>
+        <svg id="map_svg" style="width:100%;height:100%;"></svg>
+        <select class="select" name="views" id="views">
+          <option value="all">All</option>
+          <option value="na">North America</option>
+          <option value="sa">South America</option>
+        </select>
+
+        
+        <div class="container" id="all_container">
+          <div class="parent_in">
+            <div class="div_in1" id="cases">
+            </div>
+            <div class="div_in2">
+              <div class="card">
+                <div class="box" id="per_chg">
+                </div>
+              </div>
+            </div>
+            <div class="div_in3">
+              <div class="card">
+                <div class="box" id="deaths">
+                </div>
+              </div>
+            </div>
+            <div class="div_in4">
+              <div class="card">
+                <div class="box" id="f4">
+                </div>
+              </div>
+            </div>
+            <div class="div_in5">
+              <div class="card">
+                <div class="box" id="population">
+                </div>
+              </div>
+            </div>
+          </div>
+          <a id="go_back" href="#" onclick="goBack();">Go Back</a>
+        </div>
+      </div>
+      <div class="div2"><h1>Top 5 Countries with Lowest Cases per 1M</h1><svg style="width:100%;height:100%;" id="top_bar"></svg></div>
+      <div class="div3"><h1>Bottom 5 Countries with Lowest Cases per 1M</h1><svg style="width:100%;height:100%;" id="bot_bar"></svg></div>
+      <div class="div4">
+        <h1>Weekly Case % Change</h1> 
+        <svg id="change_bar" style="width:100%;height:100%;" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/weekly_change.js"></script>
+    <script src="js/top_bar.js"></script>
+    <script src="js/bot_bar.js"></script>
+    <script src="js/all_features.js"></script>
+
+  </body>
+</html>
